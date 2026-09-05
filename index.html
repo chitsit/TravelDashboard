@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Explore India - Travel Website</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Explore India 🇮🇳</div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <h1>Discover Incredible India</h1>
+
+            <p>
+                Explore beautiful destinations, rich culture,
+                breathtaking landscapes and unforgettable experiences.
+            </p>
+
+            <a href="#destinations" class="hero-button">
+                Explore Destinations
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- Destinations Section -->
+    <section id="destinations" class="destinations-section">
+
+        <div class="section-heading">
+            <h2>Favourite Destinations of India</h2>
+
+            <p>
+                Click on any destination to discover more.
+            </p>
+        </div>
+
+
+        <div class="destination-grid">
+
+            <!-- Jaipur -->
+            <div class="destination-card" onclick="showDestination('jaipur')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80"
+                    alt="Jaipur"
+                >
+
+                <div class="card-content">
+                    <h3>Jaipur</h3>
+
+                    <p>
+                        The Pink City famous for magnificent forts,
+                        palaces and royal heritage.
+                    </p>
+
+                    <button>Discover More →</button>
+                </div>
+
+            </div>
+
+
+            <!-- Goa -->
+            <div class="destination-card" onclick="showDestination('goa')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?auto=format&fit=crop&w=800&q=80"
+                    alt="Goa"
+                >
+
+                <div class="card-content">
+                    <h3>Goa</h3>
+
+                    <p>
+                        Relax on beautiful beaches and enjoy
+                        Goa's vibrant coastal culture.
+                    </p>
+
+                    <button>Discover More →</button>
+                </div>
+
+            </div>
+
+
+            <!-- Kerala -->
+            <div class="destination-card" onclick="showDestination('kerala')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80"
+                    alt="Kerala"
+                >
+
+                <div class="card-content">
+                    <h3>Kerala</h3>
+
+                    <p>
+                        Experience peaceful backwaters,
+                        lush greenery and tropical beauty.
+                    </p>
+
+                    <button>Discover More →</button>
+                </div>
+
+            </div>
+
+
+            <!-- Ladakh -->
+            <div class="destination-card" onclick="showDestination('ladakh')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80"
+                    alt="Ladakh"
+                >
+
+                <div class="card-content">
+                    <h3>Ladakh</h3>
+
+                    <p>
+                        Discover dramatic mountains, monasteries
+                        and breathtaking Himalayan landscapes.
+                    </p>
+
+                    <button>Discover More →</button>
+                </div>
+
+            </div>
+
+
+            <!-- Varanasi -->
+            <div class="destination-card" onclick="showDestination('varanasi')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1561361058-c24cecae35ca?auto=format&fit=crop&w=800&q=80"
+                    alt="Varanasi"
+                >
+
+                <div class="card-content">
+                    <h3>Varanasi</h3>
+
+                    <p>
+                        Experience one of India's oldest cities,
+                        famous for its ghats and spiritual heritage.
+                    </p>
+
+                    <button>Discover More →</button>
+                </div>
+
+            </div>
+
+
+            <!-- Manali -->
+            <div class="destination-card" onclick="showDestination('manali')">
+
+                <img
+                    src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80"
+                    alt="Manali"
+                >
+
+                <div class="card-content">
+                    <h3>Manali</h3>
+
+                    <p>
+                        Enjoy snow-covered mountains, valleys,
+                        adventure activities and scenic beauty.
+                    </p>
+
+                    <button>Discover More →</button>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+
+        <div class="about-content">
+
+            <h2>Why Explore India?</h2>
+
+            <p>
+                India is a land of incredible diversity. From the
+                Himalayan mountains to tropical beaches, ancient
+                cities to modern destinations, every part of India
+                offers a unique travel experience.
+            </p>
+
+            <p>
+                Start your journey and discover the places that
+                make India truly incredible.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Destination Details Modal -->
+    <div id="destinationModal" class="modal">
+
+        <div class="modal-content">
+
+            <button class="close-button" onclick="closeModal()">
+                &times;
+            </button>
+
+            <img id="modalImage" src="" alt="Destination">
+
+            <div class="modal-body">
+
+                <h2 id="modalTitle"></h2>
+
+                <p id="modalDescription"></p>
+
+                <div class="destination-info">
+
+                    <div>
+                        <strong>📅 Best Time</strong>
+                        <p id="modalBestTime"></p>
+                    </div>
+
+                    <div>
+                        <strong>⏱ Recommended Stay</strong>
+                        <p id="modalDuration"></p>
+                    </div>
+
+                </div>
+
+
+                <h3>✨ Top Highlights</h3>
+
+                <ul id="modalHighlights"></ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Explore India. Made with ❤️ for travellers.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
